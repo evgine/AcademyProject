@@ -14,7 +14,7 @@ const RedisStore = connectRedis(session);
 const client = redis.createClient();
 
 client.on('error', function (err) {
-    console.log('Could not connection with redis. ' , err);
+    console.log('Could not connection with redis', err);
 });
 client.on('connect', function () {
     console.log('Connected to redis successfully');
@@ -48,6 +48,6 @@ app.use((req, res) => {
         success: false,
         messages: ['Error 404: Page Not Found'],
     })
-})
+});
 
 app.listen(process.env.PORT || 5000);
