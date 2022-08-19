@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const GroupController = require("../controllers/group-controller");
 const RateController = require("../controllers/rate-controller");
-const BooksController = require("../controllers/book-controller")
+const BookController = require("../controllers/book-controller")
 
 router.get("/groups", GroupController.groupsIndex);
 router.post("/groups", GroupController.createGroup);
