@@ -14,7 +14,7 @@ const RedisStore = connectRedis(session);
 const client = redis.createClient();
 
 client.on('error', function (err) {
-    console.log('Could not establish a connection with redis. ' , err);
+    console.log('Could not connection with redis. ' , err);
 });
 client.on('connect', function () {
     console.log('Connected to redis successfully');
@@ -23,7 +23,6 @@ client.on('connect', function () {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser(process.env.COOKIE_SECRET));
-
 app.use(session({
     secret: process.env.COOKIE_SECRET,
     store: new RedisStore({
@@ -50,6 +49,5 @@ app.use((req, res) => {
         messages: ['Error 404: Page Not Found'],
     })
 })
-
 
 app.listen(process.env.PORT || 5000);
