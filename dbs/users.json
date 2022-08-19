@@ -1,0 +1,12 @@
+[
+    {
+        "age": 28,
+        "name": "Gevorg",
+        "lastname": "Aghakhanyan",
+        "email": "qwe@gmail.com",
+        "password": "$2b$10$BOI889xjdFp/efK1qXFdwOxcu7Co/OCax9.S6mGK0wSFMWX53X6Ki",
+        "role": 2,
+        "image_name": "qwe@gmail.com_1655830429058.webp",
+        "id": 1
+    }
+]
